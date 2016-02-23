@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+README
+-------------------------------------------------------------------------------
+
+The siphashsum project is a suite of command line utilities for the SipHash [1]
+hashing algorithms designed by Jean-Pilippe Aumasson
+<jeanphilippe.aumasson@gmail.com> and Daniel J. Bernsteind <jb@cr.yp.to>.
+
+The algorithm itself is implemented by siphash.h [2], a header-based
+implementation of SipHash created by William Ahern
+<william@25thandClement.com>, released under the CC0 Public Domain Dedication.
+
+ 1. https://www.131002.net/siphash/
+ 2. http://25thandclement.com/~william/projects/siphash.h.html
+
+
+Copyright and license
+
+---------------------
+
+siphashsum is licensed under the terms of the GNU General Public License
+(GPL), version 2 or later.
+
+Please see the individual source files for the full list of copyright holders.
