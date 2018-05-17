@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
  */
 
-#include <inttypes.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -56,7 +55,9 @@ static void siphash24_file(const char *path) {
 
     fclose(f);
 
-    printf("%016" PRIx64 "  %s\n", sip24_final(&hash), path);
+    const uint64_t r = sip24_final(&hash);
+    printf("%08x%08x  %s\n", (uint32_t)(0xFFFFFFFF & (r >> 32)),
+        (uint32_t)(0xFFFFFFFF & r), path);
 }
 
 static int hex2dec(const char c) {
